@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Autism Prediction App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('background-image.jpg'); /* Replace with your background image path */
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+        }
+
+        .page {
+            width: 21cm;
+            min-height: 29.7cm;
+            padding: 2cm;
+            margin: 1cm auto;
+            border: 1px #951d9b solid;
+            border-radius: 5px;
+            box-shadow: 10px 10px 10px rgba(90, 11, 78, 0.1);
+        }
+
+        @page {
+            size: A4;
+            margin: 10px;
+        }
+
+        header {
+            font-size: 36px;
+            font-weight: bold;
+            color: #fff;
+            text-align: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), linear-gradient(to left, #553c9a, #b393d3);
+        }
+
+        h3 {
+            font-size: 24px;
+            color: #210f6b;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 2em;
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding-bottom: 20px;
+        }
+
+        img.uploaded-image {
+            max-width: 100%;
+            height: auto;
+            margin: 1em 0;
+        }
+
+        .result {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-top: 1em;
+        }
+
+        .upload-form {
+            text-align: center;
+        }
+
+        .upload-button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 0.5em 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .upload-button:hover {
+            background-color: #0056b3;
+            color: white;
+        }
+
+        .upload-button:active {
+            background-color: #004699;
+            color: white;
+        }
+
+        color {
+            color: #edeef0;
+        }
+
+        p1 {
+            color: #333; /* Change the color as needed */
+        }
+
+        p3 {
+            color: #333; /* Change the color as needed */
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+    </style>
+
+</head>
+
+<body class="page">
+    <header>
+        <h1>Autism Prediction App</h1>
+    </header>
+    <h3>
+        <center>
+            PROJECT TITLE:
+        </center>
+    </h3>
+    <p>
+        <center>
+            <b>Classification and Detection of Autism Spectrum Disorder Based on Deep Learning Algorithms.</b>
+        </center>
+    </p>
+    <h3>
+        INTRODUCTION:
+    </h3>
+    <p1>
+        Autism spectrum disorder (ASD) is a type of mental illness that can be detected by using social media data and
+        biomedical images.
+        <color>Autism spectrum disorder (ASD) is a neurological disease correlated with brain growth that later impacts the
+            physical impression of the face. Children with ASD have dissimilar facial landmarks, which set them noticeably
+            apart from typically developed (TD) children.</color>
+
+        <br />
+        <br />
+        Novelty of the proposed research is to design a system that is based on autism spectrum disorder detection on social
+        media and face recognition. <color>To identify such landmarks, deep learning techniques are used.</color>
+    </p1>
+
+    <div class="container">
+        <form class="upload-form" method="post" enctype="multipart/form-data">
+            <input type="file" name="image" accept="image/*" required>
+            <button class="upload-button" type="submit">Upload and Predict</button>
+        </form>
+        {% if img_path %}
+        <hr>
+        <h2>Uploaded Image</h2>
+        <img src="{{ url_for('static',filename='uploads/'+filename) }}" alt="Uploaded Image" style="max-width: 100%;">
+        <p class="result">Predicted Result: {{ result }}</p>
+        {% endif %}
+    </div>
+    <h3>
+        TEAM MEMBERS:
+    </h3>
+    <p3>
+        1.PEDDA MEKALA HEMA KUMAR REDDY<color>(1CR21AI040)</color><br />
+        2.PUDI BHEEMESH ANUPAM<color>(1CR21AI042)</color><br />
+        3.HARSHITH JR <color>(1CR21AI027)</color><br />
+    </p3>
+    <h3>
+        TEAM MENTOR:
+    </h3>
+    <p3>
+        Ms.SHYAMALI DAS
+    </p3>
+</body>
+
+</html>
